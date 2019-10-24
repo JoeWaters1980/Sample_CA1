@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Sample_CA1
 {
-    class Game
+    public class Game
     {
         static void Main(string[] args)
         {
             // a standard list construction
             List<Player> players = new List<Player>();
-
+           
             Player player1 = new Player(1, "Millie", 0);
             Player player2 = new Player(2, "Katie", 0);
             Player player3 = new Player(3, "Kevin", 0);
@@ -26,16 +26,62 @@ namespace Sample_CA1
             players.Add(player4);
             players.Add(player5);
 
+            DistplayPlayers(players);
 
-            Console.WriteLine(player1.ToString()+"\n"+
-                player2.ToString()+"\n"+
-                player3.ToString()+"\n"+
-                player4.ToString()+ "\n"+
-                player5.ToString());
+            EnterPlayerScore(players);
+
+            //Console.WriteLine(player1.ToString() + "\n" +
+            //     player2.ToString() + "\n" +
+            //     player3.ToString() + "\n" +
+            //     player4.ToString() + "\n" +
+            //     player5.ToString());
+        }
+        // add in the list <Player>
+        public static void DistplayPlayers(List<Player> players)
+        {
+            Console.WriteLine("{0,-10}{1,-10}{2,-10}{3,-10}{4,-10}", "Player 1", "Player 2", "Player 3", "Player 4", "Player 5");
+            foreach (Player player in players)
+            {
+                Console.Write("{0,-10}", player.Score);
+            }
+            Console.WriteLine();
         }
 
-      
+        public static void EnterPlayerScore(List<Player> players)
+        {
+            int playNumber; 
+                int score=0;
+            string inputText = "Please enter number of player you wish to add score for >> ";
+            int exit = 0;
+
+            Console.WriteLine(inputText);
+            playNumber =int.Parse(Console.ReadLine());
+
+
+            List<Player> allplayers = new List<Player>();
+            allplayers 
+
+
+            while (playNumber!=exit)
+            {
+
+                //get the appropriate player
+                players.
+
+                //add one to that players score
+
+                //ask for another player number
+
+
+
+                Console.WriteLine(inputText);
+                playNumber = int.Parse(Console.ReadLine());
+                score++;
+            }
+
+        }
+
 
     }
-   
+
 }
